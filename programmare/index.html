@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend - Il tuo radar sui mercati</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="nav">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="nav-logo">
+                <h1 class="gradient-text">Trend</h1>
+            </a>
+            <div class="nav-links">
+                <a href="about.html" class="nav-link" data-i18n="trendIntro">Cos'è Trend</a>
+                <a href="invest.html" class="nav-link" data-i18n="investOpportunity">Opportunità di investimento</a>
+                <a href="collaborate.html" class="nav-link" data-i18n="joinUs">Collabora con noi</a>
+                <a href="team.html" class="nav-link" data-i18n="ourTeam">Il nostro Team</a>
+            </div>
+            <div class="nav-right">
+                <a href="#join" class="nav-cta glow-effect" data-i18n="joinBeta">Join Beta</a>
+                <div class="lang-switch">
+                    <span class="lang-option" data-lang="it">IT</span>
+                    <span class="lang-separator">|</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="heroTitle">Trend: il tuo radar sui mercati</h1>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">
+                    Trend è una piattaforma di previsione dei mercati finanziari che sfrutta la gamification per validare l'accuratezza degli utenti. Ogni utente formula previsioni su asset azionari e crypto, monitora le performance e ottiene punteggi reputazionali in base alla precisione. Nessuna operatività diretta, solo signal e competizione.
+                </p>
+                <div class="hero-cta">
+                    <a href="about.html" class="primary-button glow-effect" data-i18n="discoverTrend">Scopri Trend</a>
+                    <a href="demo.html" class="secondary-button" data-i18n="requestDemo">Richiedi Demo</a>
+                </div>
+            </div>
+
+            <!-- How It Works Section -->
+            <section class="how-it-works-scroll" id="how-it-works">
+                <div class="scroll-title">
+                    <h2 class="section-title" data-i18n="howItWorksTitle">Come Funziona</h2>
+                </div>
+                
+                <div class="step-panels">
+                    <div class="step-panel" data-step="1">
+                        <div class="step-content">
+                            <div class="step-icon">🧠</div>
+                            <h3 data-i18n="step1Title">Fai una previsione</h3>
+                            <p data-i18n="step1Desc">
+                                Scegli un asset tra azioni o crypto.<br>
+                                Decidi se salirà o scenderà nel tempo.<br>
+                                Imposta un orizzonte: da 1 ora a 1 anno.<br>
+                                Aggiungi una percentuale attesa.<br>
+                                Invia la tua previsione in pochi secondi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-panel" data-step="2">
+                        <div class="step-content">
+                            <div class="step-icon">⏱️</div>
+                            <h3 data-i18n="step2Title">Monitora l'esito</h3>
+                            <p data-i18n="step2Desc">
+                                Ogni previsione viene tracciata live.<br>
+                                Puoi vedere l'andamento e la performance.<br>
+                                Hai sempre accesso al tuo storico.<br>
+                                Più sei accurato, più guadagni reputazione.<br>
+                                Tutto è visibile e aggiornato in tempo reale.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-panel" data-step="3">
+                        <div class="step-content">
+                            <div class="step-icon">🏆</div>
+                            <h3 data-i18n="step3Title">Scala la classifica</h3>
+                            <p data-i18n="step3Desc">
+                                Ottieni un punteggio per ogni previsione.<br>
+                                I migliori entrano nel ranking mensile.<br>
+                                Sfida gli altri utenti con le tue intuizioni.<br>
+                                Più precisione = più visibilità.<br>
+                                Diventa un top predictor e costruisci credibilità.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Email Signup Section -->
+            <section class="email-signup">
+                <div class="container">
+                    <h2 data-i18n="emailTitle">Vuoi ricevere aggiornamenti in anteprima?</h2>
+                    <form class="signup-form" id="signupForm" onsubmit="return handleDemoSubmit(event)">
+                        <div class="input-group">
+                            <input type="email" id="signupEmail" data-i18n-placeholder="emailPlaceholder" placeholder="Il tuo indirizzo email" required>
+                            <button type="submit" class="primary-button glow-effect" data-i18n="subscribe">Iscriviti</button>
+                        </div>
+                        <div id="signupMessage" class="demo-message" style="display: none;" data-i18n="demoThankYou">
+                            Grazie per la richiesta! Ti contatteremo il prima possibile.
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Roadmap Timeline -->
+            <div class="roadmap-timeline">
+                <!-- Completed Section -->
+                <div class="timeline-section completed">
+                    <div class="timeline-header">
+                        <h3 data-i18n="roadmapCompletedTitle">Completato</h3>
+                    </div>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapValidationTitle">Validazione idea e community</h4>
+                                <p data-i18n="roadmapValidationDesc">Abbiamo raccolto feedback da centinaia di utenti e investitori per testare il concetto di Trend.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapLandingTitle">Landing page MVP</h4>
+                                <p data-i18n="roadmapLandingDesc">Online la prima versione del sito, con supporto multilingua e struttura espandibile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- In Progress Section -->
+                <div class="timeline-section in-progress">
+                    <div class="timeline-header">
+                        <h3 data-i18n="roadmapInProgressTitle">In corso</h3>
+                    </div>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapMvpTitle">MVP funzionante (sandbox)</h4>
+                                <p data-i18n="roadmapMvpDesc">Il prototipo attuale mostra la struttura finale ma non è ancora interattivo: puoi esplorare l'interfaccia, ma non inserire previsioni.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapPredictionTitle">Sistema di previsioni</h4>
+                                <p data-i18n="roadmapPredictionDesc">Costruzione del modulo che permetterà agli utenti di inviare previsioni su azioni e crypto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Steps Section -->
+                <div class="timeline-section future">
+                    <div class="timeline-header">
+                        <h3 data-i18n="roadmapFutureTitle">Prossimi step</h3>
+                    </div>
+                    <div class="timeline-items">
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapAccountTitle">Account utente & profilo</h4>
+                                <p data-i18n="roadmapAccountDesc">Creazione dei profili personali, storico previsioni e reputazione visibile.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapMobileTitle">Mobile-first design</h4>
+                                <p data-i18n="roadmapMobileDesc">Ottimizzazione totale per smartphone e PWA per uso da browser mobile.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-aos="fade-up">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 data-i18n="roadmapNotificationsTitle">Notifiche e aggiornamenti</h4>
+                                <p data-i18n="roadmapNotificationsDesc">Avvisi automatici su esito delle previsioni e posizionamento in classifica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <svg width="100%" height="100%" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:0.2"/>
+                            <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.2"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- App Window Frame -->
+                    <rect x="50" y="50" width="700" height="500" rx="16" 
+                          fill="rgba(30, 30, 30, 0.9)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+                    <!-- Chart Area -->
+                    <path d="M100 400 L200 300 L300 350 L400 200 L500 250 L600 150" 
+                          stroke="#4F46E5" stroke-width="3" fill="none"/>
+                    <!-- Prediction Cards -->
+                    <rect x="100" y="100" width="200" height="100" rx="8" 
+                          fill="url(#cardGradient)" stroke="rgba(255, 255, 255, 0.1)"/>
+                    <rect x="350" y="100" width="200" height="100" rx="8" 
+                          fill="url(#cardGradient)" stroke="rgba(255, 255, 255, 0.1)"/>
+                    <!-- Stats Area -->
+                    <rect x="100" y="450" width="600" height="50" rx="8" 
+                          fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Carousel Section -->
+    <section class="social-carousel-section">
+        <div class="container">
+            <h2 class="social-carousel-title" data-i18n="socialTitle">Seguici sui social</h2>
+            <div class="social-carousel-container">
+                <div class="social-carousel" id="socialCarousel">
+                    <div class="social-cards-container">
+                        <!-- LinkedIn -->
+                        <div class="social-card">
+                            <a href="#linkedin" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+                        
+                        <!-- Telegram -->
+                        <div class="social-card">
+                            <a href="#telegram" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-telegram-app.png" alt="Telegram">
+                            </a>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="social-card">
+                            <a href="#instagram" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-instagram.png" alt="Instagram">
+                            </a>
+                        </div>
+                        
+                        <!-- Twitter -->
+                        <div class="social-card">
+                            <a href="#twitter" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-twitter.png" alt="Twitter">
+                            </a>
+                        </div>
+                        
+                        <!-- TikTok -->
+                        <div class="social-card">
+                            <a href="#tiktok" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-tiktok.png" alt="TikTok">
+                            </a>
+                        </div>
+                        
+                        <!-- Reddit -->
+                        <div class="social-card">
+                            <a href="#reddit" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-reddit.png" alt="Reddit">
+                            </a>
+                        </div>
+                        
+                        <!-- Facebook -->
+                        <div class="social-card">
+                            <a href="#facebook" target="_blank" rel="noopener">
+                                <img src="assets/icons8-facebook-color/icons8-facebook-144.png" alt="Facebook">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-control prev-btn" aria-label="Previous">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-control next-btn" aria-label="Next">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kickstarter Section -->
+    <section class="testimonials animate-on-scroll" id="kickstarter">
+        <div class="section-background light"></div>
+        <div class="container">
+            <h2 class="section-title" data-i18n="kickstarterTitle">Sostienici su Kickstarter</h2>
+            <p class="kickstarter-intro" data-i18n="kickstarterIntro">Trend è live su Kickstarter e ha già raccolto €1.400 dai primi sostenitori. Aiutaci a costruire il futuro della finanza predittiva!</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 26%"></div>
+                </div>
+                <div class="progress-stats">
+                    <span class="progress-number">€1.400</span>
+                    <span class="progress-label" data-i18n="raised">raccolti su €5.000</span>
+                </div>
+            </div>
+
+            <div class="supporters-grid">
+                <div class="supporter-card">
+                    <div class="supporter-avatar">GR</div>
+                    <div class="supporter-info">
+                        <h4>Giulia R.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">ML</div>
+                    <div class="supporter-info">
+                        <h4>Matteo L.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">SV</div>
+                    <div class="supporter-info">
+                        <h4>Serena V.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">LP</div>
+                    <div class="supporter-info">
+                        <h4>Luca P.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+                <div class="supporter-card">
+                    <div class="supporter-avatar">AD</div>
+                    <div class="supporter-info">
+                        <h4>Angelo D.</h4>
+                        <p>Early Supporter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq animate-on-scroll" id="faq">
+        <div class="section-background light"></div>
+        <div class="container">
+            <h2 class="section-title" data-i18n="faqTitle">Domande Frequenti</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 data-i18n="faqQ1">Cosa rende Trend diverso da un'app di trading?</h3>
+                    <p data-i18n="faqA1">Trend non è un broker: non compri o vendi asset. Fai previsioni, guadagni reputazione e ti confronti con la community.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faqQ2">È gratis?</h3>
+                    <p data-i18n="faqA2">Sì, la versione base è gratuita. In futuro saranno disponibili funzionalità premium opzionali.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-i18n="faqQ3">Serve esperienza per iniziare?</h3>
+                    <p data-i18n="faqA3">No, Trend è pensata per essere accessibile a chiunque, anche a chi si avvicina per la prima volta ai mercati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="gradient-text">Trend</h3>
+                    <p>Il futuro della finanza predittiva.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Prodotto</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#beta">Beta Program</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Azienda</h4>
+                    <a href="#about">Chi Siamo</a>
+                    <a href="#careers">Lavora con noi</a>
+                    <a href="#press">Press</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legale</h4>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Termini</a>
+                    <a href="#security">Sicurezza</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="#twitter" class="social-link">𝕏</a>
+                        <a href="#linkedin" class="social-link">in</a>
+                        <a href="#instagram" class="social-link">📸</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footerRights">&copy; 2024 Trend. Tutti i diritti riservati.</p>
+            </div>
+            <p class="footer-disclaimer" data-i18n="footerDisclaimer">
+                © 2024 Trend. Tutti i diritti riservati. I contenuti presenti su questo sito, inclusi testi, immagini, loghi e grafiche, sono protetti da copyright e non possono essere copiati, riprodotti o distribuiti senza autorizzazione scritta. Le informazioni fornite non costituiscono consulenza finanziaria. L'utilizzo della piattaforma implica l'accettazione dei termini e delle condizioni.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
